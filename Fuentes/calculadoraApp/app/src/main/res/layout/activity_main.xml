@@ -7,35 +7,105 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+<ImageView
+    android:layout_marginTop="@dimen/marginBase"
+    android:src="@drawable/calculator"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/tamanioImagen">
+</ImageView>
+<LinearLayout
+    android:layout_marginTop="@dimen/marginBase"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
     <TextView
-
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimaryDark"
-        android:gravity="center"
+        android:text="N1"
+        android:gravity="center_horizontal"
+        android:layout_weight="2"
+        android:textSize="@dimen/tamanioLetra"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:id="@+id/n1Txt"
         android:layout_weight="1"
-        android:text="@string/texto1"
-        android:textColor="@color/primary_light"
-        android:textSize="40sp"></TextView>
-
-    <TextView
-
+        android:textSize="@dimen/tamanioLetra"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@color/colorAccent"
-        android:gravity="center"
-        android:text="@string/texto2"
-        android:textColor="@color/primary_light"
-        android:textSize="40sp"></TextView>
+        android:layout_height="wrap_content">
+    </EditText>
+</LinearLayout>
 
-    <Button
-        android:layout_weight="1"
-        android:text="@string/btn_saludar"
-        android:textSize="40sp"
-        android:textColor="@color/primary_light"
-        android:background="@color/colorPrimary"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:onClick="saludar"
-        android:layout_height="match_parent"></Button>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginBase2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:text="N2"
+            android:textSize="@dimen/tamanioLetra"></TextView>
+
+        <EditText
+            android:id="@+id/n2Txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/tamanioLetra"></EditText>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/marginBase2">
+        <Button
+            android:layout_width="match_parent"
+            android:text="@string/sumarText"
+            android:layout_weight="1"
+            android:onClick="sumar"
+            android:background="@color/colorSuma"
+            android:textColor="@color/primary_light"
+            android:textSize="@dimen/tamanioLetra"
+            android:layout_height="@dimen/tamanioBtn"
+            ></Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanioBtn"
+            android:layout_weight="1"
+            android:onClick="restar"
+            android:text="-"
+            android:textColor="@color/primary_light"
+            android:background="@color/colorResta"
+            android:textSize="@dimen/tamanioLetra"></Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/marginBase2">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanioBtn"
+            android:layout_weight="1"
+            android:text="*"
+            android:onClick="multiplicar"
+            android:textSize="@dimen/tamanioLetra"
+            android:textColor="@color/primary_light"
+            android:background="@color/colorMulti"></Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanioBtn"
+            android:layout_weight="1"
+            android:text="/"
+            android:onClick="dividir"
+            android:textSize="@dimen/tamanioLetra"
+            android:textColor="@color/primary_light"
+            android:background="@color/colorDiv"></Button>
+
+</LinearLayout>
 </LinearLayout>
